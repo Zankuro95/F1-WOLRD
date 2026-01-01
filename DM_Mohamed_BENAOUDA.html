@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R5.02 - Devoir Maison - Mohamed BENAOUDA</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background: white;
+            padding: 30px;
+            max-width: 210mm;
+            margin: 0 auto;
+            font-size: 10.5pt;
+        }
+
+        /* En-tête */
+        .document-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #E10600;
+        }
+
+        .document-header h1 {
+            font-size: 24pt;
+            color: #E10600;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .document-header .subtitle {
+            font-size: 16pt;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .document-header .author-info {
+            font-size: 10pt;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* Titres */
+        h2 {
+            font-size: 16pt;
+            color: #E10600;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            border-bottom: 2px solid #E10600;
+            padding-bottom: 3px;
+        }
+
+        h3 {
+            font-size: 13pt;
+            color: #FF8700;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        h4 {
+            font-size: 11pt;
+            color: #333;
+            margin-top: 10px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        /* Paragraphes */
+        p {
+            font-size: 10.5pt;
+            text-align: justify;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        /* Listes */
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            font-size: 10pt;
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+
+        /* Listes personnalisées */
+        ul.custom-bullets {
+            list-style: none;
+            margin-left: 15px;
+        }
+
+        ul.custom-bullets li:before {
+            content: "→ ";
+            color: #E10600;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        /* Checkboxes */
+        .checkbox {
+            color: #4CAF50;
+            font-weight: bold;
+            margin-right: 3px;
+        }
+
+        /* Encadrés */
+        .info-box {
+            background: #f5f5f5;
+            border-left: 3px solid #E10600;
+            padding: 10px;
+            margin: 12px 0;
+            font-size: 10pt;
+            page-break-inside: avoid;
+        }
+
+        .info-box strong {
+            color: #E10600;
+        }
+
+        /* Structure */
+        .structure-box {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 9pt;
+            page-break-inside: avoid;
+            line-height: 1.3;
+        }
+
+        /* Tableau */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            font-size: 9.5pt;
+            page-break-inside: avoid;
+        }
+
+        table th {
+            background: #E10600;
+            color: white;
+            padding: 8px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        table td {
+            padding: 6px;
+            border: 1px solid #ddd;
+        }
+
+        table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        /* Cartes équipes compactes */
+        .team-compact {
+            background: #f5f5f5;
+            padding: 8px;
+            margin: 8px 0;
+            border-left: 3px solid #E10600;
+            font-size: 9.5pt;
+            page-break-inside: avoid;
+        }
+
+        .team-compact strong {
+            color: #E10600;
+        }
+
+        /* Code */
+        code {
+            background: #f5f5f5;
+            padding: 2px 4px;
+            border-radius: 2px;
+            font-family: 'Courier New', monospace;
+            font-size: 9pt;
+            color: #E10600;
+        }
+
+        /* Footer */
+        .document-footer {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 2px solid #E10600;
+            text-align: center;
+            font-size: 9pt;
+            color: #666;
+        }
+
+        /* Page breaks */
+        .page-break {
+            page-break-after: always;
+        }
+
+        /* Emphase */
+        strong {
+            color: #E10600;
+            font-weight: bold;
+        }
+
+        /* Section numérotée */
+        .section-number {
+            color: #E10600;
+            font-weight: bold;
+            font-size: 12pt;
+            margin-right: 8px;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            background: #E10600;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 8pt;
+            font-weight: bold;
+            margin-right: 4px;
+        }
+
+        .badge.secondary {
+            background: #FF8700;
+        }
+
+        /* Deux colonnes */
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 10px 0;
+        }
+
+        /* Compact list */
+        .compact-list {
+            columns: 2;
+            column-gap: 20px;
+            font-size: 9.5pt;
+        }
+
+        .compact-list li {
+            margin-bottom: 3px;
+        }
+
+        /* Print */
+        @media print {
+            body {
+                padding: 0;
+            }
+            
+            .page-break {
+                page-break-after: always;
+            }
+            
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+            
+            .info-box, .team-compact, table {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Highlight section compact */
+        .highlight-compact {
+            background: #fff5f5;
+            padding: 12px;
+            border: 1px solid #E10600;
+            margin: 10px 0;
+            page-break-inside: avoid;
+        }
+
+        /* KompoZer specific */
+        .kompozer-box {
+            background: #e8f5e9;
+            border-left: 3px solid #4CAF50;
+            padding: 10px;
+            margin: 12px 0;
+            font-size: 10pt;
+            page-break-inside: avoid;
+        }
+
+        .kompozer-box strong {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête -->
+    <div class="document-header">
+        <h1>R5.02 : Devoir Maison</h1>
+        <div class="subtitle">Création d'un Site Personnel</div>
+        <div class="author-info">
+            <strong>Auteur :</strong> Mohamed BENAOUDA | 
+            <strong>Module :</strong> R5.02 - Création de Sites Web | 
+            <strong>Date :</strong> Décembre 2025
+        </div>
+    </div>
+
+    <!-- 1. Thème -->
+    <h2><span class="section-number">1.</span>Thème du Site</h2>
+    
+    <p>Le thème choisi pour mon site internet est la <strong>Formule 1</strong>. J'ai opté pour ce sujet car c'est le sport automobile le plus prestigieux au monde, combinant technologie de pointe, vitesse extrême et compétition internationale. La F1 représente l'excellence en ingénierie et le spectacle sportif à son plus haut niveau. Ce projet me permet de développer mes compétences en développement web tout en explorant un domaine qui me passionne.</p>
+
+    <div class="info-box">
+        <strong>Objectifs :</strong> Présenter l'histoire de la F1 depuis 1950, détailler les équipes actuelles et leurs performances, présenter les pilotes de la saison 2024 et les légendes historiques, découvrir les circuits emblématiques et partager actualités et statistiques.
+    </div>
+
+    <!-- 2. Organigramme -->
+    <h2><span class="section-number">2.</span>Organigramme du Site</h2>
+    
+    <p>Mon site est organisé en <strong>3 niveaux hiérarchiques</strong> :</p>
+
+    <h3>Niveau 1 : Page d'accueil (index.html)</h3>
+    <ul class="compact-list">
+        <li>Hero section avec effet parallaxe</li>
+        <li>Timeline historique (1950-2025)</li>
+        <li>Aperçu des équipes principales</li>
+        <li>Actualités récentes</li>
+        <li>Statistiques clés avec compteurs animés</li>
+        <li>Records légendaires</li>
+    </ul>
+
+    <h3>Niveau 2 : Pages de contenu</h3>
+    
+    <p><strong>A) Page Équipes (equipes.html)</strong> - 6 équipes détaillées : Red Bull Racing, Mercedes-AMG, Ferrari, McLaren, Aston Martin, Alpine. Chaque équipe présente ses statistiques (titres, victoires, poles), son histoire et ses deux pilotes actuels.</p>
+    
+    <p><strong>B) Page Pilotes (pilotes.html)</strong> - 12 pilotes de la saison 2025 avec statistiques individuelles + section "Légendes" avec 6 pilotes historiques (Schumacher, Senna, Prost, Fangio, Lauda, Clark).</p>
+    
+    <p><strong>C) Page Circuits (circuits.html)</strong> - 9 circuits emblématiques avec caractéristiques techniques : Monaco, Spa-Francorchamps, Silverstone, Monza, Suzuka, Interlagos, Marina Bay, COTA, Yas Marina. Tableau comparatif inclus.</p>
+
+    <h3>Niveau 3 : Navigation interne</h3>
+    <p>Navigation fluide (smooth scroll), liens d'ancrage vers sections, footer avec navigation rapide, menu fixe responsive.</p>
+
+    <!-- 3. Version KompoZer -->
+    <h2><span class="section-number">3.</span>Développement avec KompoZer</h2>
+
+    <div class="kompozer-box">
+        <strong>📝 Phase KompoZer :</strong> Avant de développer le site complet, j'ai dû créer une version simplifiée avec KompoZer pour valider la structure en 3 niveaux. Cette étape s'est révélée contraignante en raison des limitations de l'outil.
+    </div>
+
+    <h3>Pages créées dans KompoZer</h3>
+
+    <p><strong>Niveau 1 :</strong></p>
+    <ul style="font-size: 9.5pt;">
+        <li><code>niveau1_accueil.html</code> - Page d'accueil avec présentation générale, timeline historique et liens vers niveau 2</li>
+    </ul>
+
+    <p><strong>Niveau 2 :</strong></p>
+    <ul style="font-size: 9.5pt;">
+        <li><code>niveau2_equipes.html</code> - 6 équipes F1 avec statistiques et liens vers niveau 3</li>
+        <li><code>niveau2_pilotes.html</code> - 6 pilotes actuels + 3 légendes avec statistiques</li>
+        <li><code>niveau2_circuits.html</code> - 6 circuits emblématiques avec tableau comparatif</li>
+    </ul>
+
+    <p><strong>Niveau 3 (exemple) :</strong></p>
+    <ul style="font-size: 9.5pt;">
+        <li><code>niveau3_redbull.html</code> - Page détaillée complète sur Red Bull Racing avec histoire, palmarès et profils des pilotes</li>
+    </ul>
+
+    <h3>Difficultés rencontrées avec KompoZer</h3>
+
+    <div class="info-box" style="background: #fff3cd; border-left-color: #FF8700;">
+        <strong>⚠️ Limitations de KompoZer :</strong>
+        <ul style="font-size: 9.5pt; margin-top: 8px;">
+            <li><strong>Interface peu intuitive</strong> : Navigation complexe entre les modes (Normal, HTML, Source)</li>
+            <li><strong>Bugs fréquents</strong> : Perte de formatage, code HTML généré parfois incorrect</li>
+            <li><strong>Pas de support moderne</strong> : Logiciel obsolète (dernière mise à jour en 2010)</li>
+            <li><strong>Édition CSS limitée</strong> : Difficile de créer des styles avancés</li>
+            <li><strong>Prévisualisation imprécise</strong> : Rendu différent entre KompoZer et navigateurs modernes</li>
+            <li><strong>Workflow ralenti</strong> : Obligation de coder manuellement pour un résultat professionnel</li>
+        </ul>
+    </div>
+
+    <h3>Version KompoZer créée (par obligation)</h3>
+
+    <div class="two-columns">
+        <div>
+            <p><strong>Ce qui a fonctionné :</strong></p>
+            <ul style="font-size: 9.5pt;">
+                <li>Structure HTML basique validée</li>
+                <li>Navigation entre 3 niveaux</li>
+                <li>Organisation du contenu</li>
+                <li>Validation de l'arborescence</li>
+            </ul>
+        </div>
+        <div>
+            <p><strong>Compromis nécessaires :</strong></p>
+            <ul style="font-size: 9.5pt;">
+                <li>Design très simplifié</li>
+                <li>CSS intégré (non optimal)</li>
+                <li>Pas d'animations possibles</li>
+                <li>Styles basiques uniquement</li>
+            </ul>
+        </div>
+    </div>
+
+    <p><strong>Constat :</strong> KompoZer m'a permis de valider la structure du site, mais son utilisation difficile et ses nombreuses limitations m'ont conduit à rapidement passer au développement avec un éditeur de code moderne pour obtenir un résultat professionnel.</p>
+
+    <div class="page-break"></div>
+
+    <!-- 4. Structure finale -->
+    <h2><span class="section-number">4.</span>Structure Technique du Site Final</h2>
+
+    <p>Après validation avec KompoZer, développement du site complet avec fonctionnalités avancées :</p>
+
+    <div class="structure-box">
+/<br>
+├── index.html          # Page d'accueil complète<br>
+├── equipes.html       # Équipes F1 détaillées<br>
+├── pilotes.html       # Pilotes avec animations<br>
+├── circuits.html      # Circuits interactifs<br>
+├── css/<br>
+│   ├── style.css      # Styles principaux (14 945 caractères)<br>
+│   └── pages.css      # Styles pages secondaires (13 082 caractères)<br>
+├── js/<br>
+│   └── main.js        # JavaScript interactif (7 477 caractères)<br>
+├── README.md          # Documentation technique<br>
+└── kompozer/          # Version KompoZer (5 fichiers HTML)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;├── niveau1_accueil.html<br>
+&nbsp;&nbsp;&nbsp;&nbsp;├── niveau2_equipes.html<br>
+&nbsp;&nbsp;&nbsp;&nbsp;├── niveau2_pilotes.html<br>
+&nbsp;&nbsp;&nbsp;&nbsp;├── niveau2_circuits.html<br>
+&nbsp;&nbsp;&nbsp;&nbsp;└── niveau3_redbull.html
+    </div>
+
+    <!-- 5. Technologies -->
+    <h2><span class="section-number">5.</span>Technologies Utilisées</h2>
+
+    <table>
+        <tr>
+            <th style="width: 25%;">Technologie</th>
+            <th>Utilisation</th>
+        </tr>
+        <tr>
+            <td><strong>KompoZer</strong></td>
+            <td>Phase initiale : création de la structure HTML en 3 niveaux, validation de l'organisation</td>
+        </tr>
+        <tr>
+            <td><strong>HTML5</strong></td>
+            <td>Structure sémantique (header, nav, main, section, footer), version finale avancée</td>
+        </tr>
+        <tr>
+            <td><strong>CSS3</strong></td>
+            <td>Flexbox, Grid, animations, transitions, variables CSS, responsive design</td>
+        </tr>
+        <tr>
+            <td><strong>JavaScript</strong></td>
+            <td>Intersection Observer, animations, compteurs, navigation dynamique</td>
+        </tr>
+        <tr>
+            <td><strong>Font Awesome</strong></td>
+            <td>Icônes vectorielles (trophées, drapeaux, utilisateurs)</td>
+        </tr>
+        <tr>
+            <td><strong>Google Fonts</strong></td>
+            <td>Racing Sans One (titres) + Montserrat (texte)</td>
+        </tr>
+    </table>
+
+    <!-- 6. Fonctionnalités -->
+    <h2><span class="section-number">6.</span>Fonctionnalités Implémentées</h2>
+
+    <div class="two-columns">
+        <div>
+            <h4>Design & Interface</h4>
+            <ul style="font-size: 9.5pt;">
+                <li>✅ Design moderne rouge/orange F1</li>
+                <li>✅ Responsive (mobile/tablette/desktop)</li>
+                <li>✅ Navigation fixe avec menu hamburger</li>
+                <li>✅ Hero avec effet parallaxe</li>
+                <li>✅ Gradients et effets visuels</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Interactivité</h4>
+            <ul style="font-size: 9.5pt;">
+                <li>✅ Animations au scroll</li>
+                <li>✅ Compteurs animés</li>
+                <li>✅ Smooth scroll</li>
+                <li>✅ Hover effects</li>
+                <li>✅ Transitions fluides (0.3s)</li>
+            </ul>
+        </div>
+    </div>
+
+    <h4>Contenu</h4>
+    <ul class="compact-list" style="font-size: 9.5pt;">
+        <li>Timeline historique interactive</li>
+        <li>6 équipes avec statistiques</li>
+        <li>12 pilotes actuels</li>
+        <li>6 légendes historiques</li>
+        <li>9 circuits emblématiques</li>
+        <li>Section actualités</li>
+        <li>Statistiques et records</li>
+        <li>Tableau comparatif circuits</li>
+    </ul>
+
+    <!-- 7. Pages détaillées -->
+    <h2><span class="section-number">7.</span>Description des Pages</h2>
+
+    <h3>Page d'accueil</h3>
+    <p><strong>Hero :</strong> Titre "FORMULE 1" en dégradé, sous-titre "La Vitesse à l'État Pur", bouton CTA, effet parallaxe. <strong>Histoire :</strong> Timeline 1950-2025 (naissance, ère innovation, ère turbo, domination Ferrari/Red Bull, ère hybride). <strong>Équipes :</strong> Aperçu 4 équipes avec couleurs. <strong>Actualités :</strong> 3 articles récents. <strong>Statistiques :</strong> 4 compteurs animés (75 saisons, 1100+ GP, 775 pilotes, 77 circuits). <strong>Records :</strong> Hamilton & Schumacher (7 titres), Hamilton (103 victoires, 104 poles, 197 podiums).</p>
+
+    <h3>Page Équipes</h3>
+    
+    <div class="team-compact">
+        <strong>Red Bull Racing</strong> 🇦🇹 | 6 Titres | 117 Victoires | 96 Poles | Max Verstappen (#1), Sergio Pérez (#11)
+    </div>
+    <div class="team-compact">
+        <strong>Mercedes-AMG</strong> 🇩🇪 | 8 Titres | 125 Victoires | 136 Poles | Lewis Hamilton (#44), George Russell (#63)
+    </div>
+    <div class="team-compact">
+        <strong>Ferrari</strong> 🇮🇹 | 16 Titres | 243 Victoires | 247 Poles | Charles Leclerc (#16), Carlos Sainz (#55)
+    </div>
+    <div class="team-compact">
+        <strong>McLaren</strong> 🇬🇧 | 8 Titres | 183 Victoires | 156 Poles | Lando Norris (#4), Oscar Piastri (#81)
+    </div>
+    <div class="team-compact">
+        <strong>Aston Martin</strong> 🇬🇧 | 0 Titre | 1 Victoire | 1 Pole | Fernando Alonso (#14), Lance Stroll (#18)
+    </div>
+    <div class="team-compact">
+        <strong>Alpine</strong> 🇫🇷 | 2 Titres | 21 Victoires | 20 Poles | Pierre Gasly (#10), Esteban Ocon (#31)
+    </div>
+
+    <h3>Page Pilotes</h3>
+    <p><strong>Pilotes 2025 :</strong> Cartes individuelles avec numéro, nom, équipe, nationalité, statistiques (victoires/titres/poles) et biographie. <strong>Légendes :</strong> Schumacher (7 titres, 91 victoires), Senna (3 titres, 41 victoires), Prost (4 titres, 51 victoires), Fangio (5 titres), Lauda (3 titres), Clark (2 titres).</p>
+
+    <h3>Page Circuits</h3>
+    <p><strong>9 circuits :</strong> Monaco (3.337 km), Spa (7.004 km), Silverstone (5.891 km), Monza (5.793 km), Suzuka (5.807 km), Interlagos (4.309 km), Marina Bay (5.063 km - nocturne), COTA (5.513 km), Yas Marina (5.281 km - crépusculaire). Chaque circuit présente : image, drapeau, localisation, statistiques (longueur/tours/année), description, virage emblématique.</p>
+
+    <div class="page-break"></div>
+
+    <!-- 8. JavaScript -->
+    <h2><span class="section-number">8.</span>Fonctionnalités JavaScript</h2>
+
+    <h3>1. Navigation Interactive</h3>
+    <div class="structure-box">
+// Menu hamburger mobile<br>
+hamburger.addEventListener('click', () => {<br>
+&nbsp;&nbsp;navMenu.classList.toggle('active');<br>
+});<br>
+<br>
+// Liens actifs automatiques<br>
+navLinks.forEach(link => {<br>
+&nbsp;&nbsp;link.addEventListener('click', () => {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;updateActiveLink(link);<br>
+&nbsp;&nbsp;});<br>
+});
+    </div>
+
+    <h3>2. Animations au Scroll</h3>
+    <div class="structure-box">
+// Intersection Observer<br>
+const observer = new IntersectionObserver((entries) => {<br>
+&nbsp;&nbsp;entries.forEach(entry => {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (entry.isIntersecting) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry.target.classList.add('aos-animate');<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;});<br>
+}, { threshold: 0.2 });
+    </div>
+
+    <h3>3. Compteurs Animés</h3>
+    <div class="structure-box">
+const animateCounter = (element, target, duration = 2000) => {<br>
+&nbsp;&nbsp;const increment = target / (duration / 16);<br>
+&nbsp;&nbsp;let current = 0;<br>
+&nbsp;&nbsp;const timer = setInterval(() => {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;current += increment;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;element.textContent = Math.floor(current);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (current >= target) clearInterval(timer);<br>
+&nbsp;&nbsp;}, 16);<br>
+};
+    </div>
+
+    <p><strong>Autres fonctionnalités :</strong> Effet parallaxe sur hero, smooth scroll avec offset (80px), header transparent au scroll, chargement progressif (fade-in), debounce sur événements scroll (10ms).</p>
+
+    <!-- 9. Responsive -->
+    <h2><span class="section-number">9.</span>Design Responsive</h2>
+
+    <table>
+        <tr>
+            <th>Appareil</th>
+            <th>Largeur</th>
+            <th>Adaptations Principales</th>
+        </tr>
+        <tr>
+            <td><strong>Desktop</strong></td>
+            <td>&gt; 1024px</td>
+            <td>Affichage complet, grilles multi-colonnes, effets visuels</td>
+        </tr>
+        <tr>
+            <td><strong>Tablette</strong></td>
+            <td>768-1024px</td>
+            <td>Grilles 2-3 colonnes, navigation optimisée</td>
+        </tr>
+        <tr>
+            <td><strong>Mobile</strong></td>
+            <td>&lt; 768px</td>
+            <td>Menu hamburger, grilles 1 colonne, polices réduites</td>
+        </tr>
+        <tr>
+            <td><strong>Petit Mobile</strong></td>
+            <td>&lt; 480px</td>
+            <td>Optimisation maximale, éléments compacts</td>
+        </tr>
+    </table>
+
+    <p><strong>Adaptations mobile :</strong> Menu hamburger animé, hero title (6rem → 2rem), grilles en colonne unique, timeline simplifiée, cartes largeur 100%, statistiques verticales, tableau en format liste, images hauteur réduite (250px → 200px).</p>
+
+    <!-- 10. Couleurs & Typographie -->
+    <h2><span class="section-number">10.</span>Palette de Couleurs</h2>
+
+    <div class="two-columns">
+        <div>
+            <p><strong>Couleurs :</strong></p>
+            <ul style="font-size: 9.5pt;">
+                <li>Rouge F1 : <code>#E10600</code></li>
+                <li>Orange : <code>#FF8700</code></li>
+                <li>Noir : <code>#0A0A0F</code></li>
+                <li>Gris : <code>#15151E</code></li>
+                <li>Blanc : <code>#FFFFFF</code></li>
+            </ul>
+        </div>
+        <div>
+            <p><strong>Typographie :</strong></p>
+            <ul style="font-size: 9.5pt;">
+                <li><strong>Racing Sans One</strong> : Titres</li>
+                <li><strong>Montserrat</strong> : Corps (300-900)</li>
+                <li>H1 : 6rem / Racing Sans One</li>
+                <li>H2 : 3rem / Montserrat Bold</li>
+                <li>Texte : 1rem / Montserrat</li>
+            </ul>
+        </div>
+    </div>
+
+    <p><strong>Gradients :</strong> Primaire <code>linear-gradient(135deg, #E10600 0%, #FF8700 100%)</code>, Sombre <code>linear-gradient(135deg, #15151E 0%, #0A0A0F 100%)</code>. <strong>Effets :</strong> Ombres <code>0 10px 40px rgba(0,0,0,0.2)</code>, Hover <code>0 15px 50px rgba(225,6,0,0.3)</code>, Transitions 0.3s ease.</p>
+
+    <div class="page-break"></div>
+
+    <!-- 11. Optimisations -->
+    <h2><span class="section-number">11.</span>Optimisations & Performance</h2>
+
+    <div class="two-columns">
+        <div>
+            <h4>Performance JavaScript</h4>
+            <ul style="font-size: 9.5pt;">
+                <li>Debounce sur scroll (10ms)</li>
+                <li>Intersection Observer</li>
+                <li>Animations CSS (GPU)</li>
+                <li>RequestAnimationFrame</li>
+                <li>Event delegation</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Optimisations CSS</h4>
+            <ul style="font-size: 9.5pt;">
+                <li>Variables CSS</li>
+                <li>Transform & opacity</li>
+                <li>Will-change</li>
+                <li>Flexbox & Grid</li>
+                <li>Minimisation reflows</li>
+            </ul>
+        </div>
+    </div>
+
+    <h4>Accessibilité</h4>
+    <ul class="compact-list" style="font-size: 9.5pt;">
+        <li>HTML sémantique</li>
+        <li>Attributs ARIA</li>
+        <li>Contraste WCAG AA</li>
+        <li>Navigation clavier</li>
+        <li>Textes alternatifs</li>
+        <li>Focus visible</li>
+    </ul>
+
+    <!-- 12. Évolutions -->
+    <h2><span class="section-number">12.</span>Méthodologie de Développement</h2>
+
+    <div class="highlight-compact">
+        <h4>Phase 1 : Prototypage avec KompoZer (obligatoire)</h4>
+        <p style="font-size: 9.5pt;"><strong>Objectif :</strong> Valider la structure en 3 niveaux malgré les limitations de l'outil.</p>
+        <ul style="font-size: 9.5pt;">
+            <li>Création laborieuse de 5 pages HTML simples</li>
+            <li>CSS intégré dans chaque fichier (seule solution viable)</li>
+            <li>Navigation basique entre les niveaux</li>
+            <li>Design très simplifié par contrainte technique</li>
+        </ul>
+        <p style="font-size: 9.5pt; margin-top: 8px;"><strong>Difficultés :</strong> Interface peu intuitive, bugs fréquents, rendu imprécis, limitations importantes pour un site moderne.</p>
+    </div>
+
+    <div class="highlight-compact">
+        <h4>Phase 2 : Développement Professionnel (éditeur de code moderne)</h4>
+        <p style="font-size: 9.5pt;"><strong>Objectif :</strong> Créer le site final avec fonctionnalités modernes, enfin libéré des contraintes de KompoZer.</p>
+        <ul style="font-size: 9.5pt;">
+            <li>Séparation propre HTML/CSS/JavaScript</li>
+            <li>Animations et interactivité avancées</li>
+            <li>Responsive design complet et fluide</li>
+            <li>Optimisations performance (impossibles avec KompoZer)</li>
+            <li>Workflow efficace avec éditeur moderne</li>
+        </ul>
+        <p style="font-size: 9.5pt; margin-top: 8px;"><strong>Résultat :</strong> Passage à des outils professionnels (VS Code, Sublime Text) indispensable pour un site de qualité.</p>
+    </div>
+
+    <h2><span class="section-number">13.</span>Évolutions Futures</h2>
+
+    <div class="highlight-compact">
+        <strong>Court terme :</strong> Mode sombre/clair, filtrage pilotes, recherche globale, pages pilotes détaillées, calendrier interactif.
+        <br><br>
+        <strong>Moyen terme :</strong> API F1 temps réel (Ergast), système favoris (LocalStorage), section vidéos, blog actualités, comparateur performances, notifications courses.
+        <br><br>
+        <strong>Long terme :</strong> Espace membre, forum communautaire, live timing, PWA mobile, multilingue (EN/ES/IT/DE), quiz F1, système prédictions, boutique merchandise.
+    </div>
+
+    <!-- 14. Déploiement -->
+    <h2><span class="section-number">14.</span>Déploiement</h2>
+
+    <p><strong>Méthode recommandée :</strong> Utiliser l'onglet <strong>"Publish"</strong> dans l'interface de développement → Cliquer sur "Publier" → URL publique générée automatiquement.</p>
+
+    <p><strong>Alternatives :</strong></p>
+    <ul style="font-size: 9.5pt;">
+        <li><strong>GitHub Pages</strong> : Gratuit, domaine github.io, SSL automatique</li>
+        <li><strong>Netlify</strong> : Gratuit, domaine personnalisé, CDN global, déploiement auto</li>
+        <li><strong>Vercel</strong> : Ultra-rapide, optimisé performance, analytics inclus</li>
+    </ul>
+
+    <!-- 15. Conclusion -->
+    <h2><span class="section-number">15.</span>Conclusion</h2>
+
+    <p>Ce projet de site vitrine sur la Formule 1 représente un travail complet de développement web front-end intégrant de nombreuses compétences techniques et créatives.</p>
+
+    <div class="highlight-compact">
+        <strong>Points forts :</strong>
+        <ul style="font-size: 9.5pt; margin-top: 8px;">
+            <li><strong>Contrainte initiale surmontée :</strong> Malgré les difficultés avec KompoZer (interface peu intuitive, bugs, limitations), validation de la structure en 3 niveaux réussie</li>
+            <li><strong>Transition vers outils modernes :</strong> Passage nécessaire à un éditeur de code professionnel pour obtenir un résultat de qualité</li>
+            <li><strong>Structure claire :</strong> 4 pages bien organisées, navigation intuitive, 3 niveaux hiérarchiques distincts</li>
+            <li><strong>Design professionnel :</strong> Identité visuelle cohérente (rouge/orange F1), typographies appropriées, effets modernes (impossibles avec KompoZer)</li>
+            <li><strong>Interactivité avancée :</strong> Animations scroll, compteurs animés, smooth scroll, effet parallaxe</li>
+            <li><strong>Responsive complet :</strong> Adaptation tous écrans, breakpoints définis, menu hamburger</li>
+            <li><strong>Contenu riche :</strong> 6 équipes, 18 pilotes (12+6 légendes), 9 circuits, timeline, stats</li>
+            <li><strong>Performance optimisée :</strong> Debounce, Intersection Observer, animations CSS GPU-accelerated</li>
+        </ul>
+    </div>
+
+    <h3>Compétences développées</h3>
+    <p style="font-size: 9.5pt;"><span class="badge">KompoZer</span> HTML basique <span class="badge">HTML5</span> Structure sémantique <span class="badge">CSS3</span> Flexbox, Grid, animations <span class="badge">JavaScript</span> DOM, Intersection Observer <span class="badge">UX/UI</span> Design intuitif <span class="badge">Performance</span> Optimisation rendu <span class="badge">Accessibilité</span> Standards WCAG</p>
+
+    <h3>Démarche de travail et leçons apprises</h3>
+    <p style="font-size: 9.5pt;">Le passage <strong>obligatoire par KompoZer</strong> a révélé les limites d'un outil obsolète : interface peu intuitive, bugs fréquents, impossibilité de créer un design moderne. Cette contrainte m'a rapidement poussé vers des <strong>éditeurs de code professionnels</strong> (VS Code, Sublime Text) qui offrent une flexibilité totale, un workflow efficace et permettent de créer un site de qualité professionnelle. <strong>Constat :</strong> KompoZer peut valider une structure basique, mais n'est pas adapté au développement web moderne.</p>
+
+    <div class="info-box">
+        <strong>🎯 Objectif atteint :</strong> Ce projet démontre une maîtrise complète du développement web front-end. Malgré les contraintes initiales imposées par KompoZer (outil peu intuitif et limité), j'ai su m'adapter et basculer vers des outils professionnels modernes pour livrer un site de qualité. Le résultat final est prêt à être déployé et peut servir de portfolio professionnel ou de base pour des développements plus avancés (API temps réel, fonctionnalités communautaires, PWA, etc.).
+    </div>
+
+    <!-- Footer -->
+    <div class="document-footer">
+        <p><strong>Mohamed BENAOUDA</strong> | R5.02 - Création de Sites Web | Décembre 2025</p>
+        <p style="margin-top: 8px;">Développé avec passion pour les fans de Formule 1 🏎️🏁🏆</p>
+        <p style="margin-top: 10px; font-size: 8pt; color: #999;">
+            Site vitrine non officiel créé à des fins éducatives. Tous les noms, logos et marques appartiennent à leurs propriétaires respectifs.
+        </p>
+    </div>
+
+</body>
+</html>

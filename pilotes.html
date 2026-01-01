@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilotes F1 2024 - Formule 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Racing+Sans+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-flag-checkered"></i>
+                    <span>FORMULE<strong>1</strong></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="index.html#histoire" class="nav-link">Histoire</a></li>
+                    <li><a href="equipes.html" class="nav-link">Équipes</a></li>
+                    <li><a href="pilotes.html" class="nav-link active">Pilotes</a></li>
+                    <li><a href="circuits.html" class="nav-link">Circuits</a></li>
+                    <li><a href="index.html#actualites" class="nav-link">Actualités</a></li>
+                    <li><a href="index.html#stats" class="nav-link">Statistiques</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content">
+            <h1>Les Pilotes F1</h1>
+            <p>Les champions qui font vibrer les circuits</p>
+        </div>
+    </section>
+
+    <!-- Drivers Grid -->
+    <section class="section drivers-grid-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Saison 2024</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="drivers-grid-full">
+                <!-- Max Verstappen -->
+                <div class="driver-card" data-aos="fade-up">
+                    <div class="driver-card-header" style="background: linear-gradient(135deg, #1E41FF 0%, #001C58 100%);">
+                        <div class="driver-number-large">1</div>
+                        <div class="driver-card-photo">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <div class="driver-card-content">
+                        <h3>Max VERSTAPPEN</h3>
+                        <p class="driver-team"><i class="fas fa-flag-checkered"></i> Red Bull Racing</p>
+                        <p class="driver-nationality"><i class="fas fa-flag"></i> Pays-Bas</p>
+                        <div class="driver-stats-mini">
+                            <div class="stat-mini">
+                                <strong>53</strong>
+                                <span>Victoires</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>3</strong>
+                                <span>Titres</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>32</strong>
+                                <span>Poles</span>
+                            </div>
+                        </div>
+                        <p class="driver-bio">Champion du monde en titre, Max Verstappen est actuellement le pilote le plus dominant de la grille. Son talent brut et sa détermination en font une référence.</p>
+                    </div>
+                </div>
+
+                <!-- Lewis Hamilton -->
+                <div class="driver-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="driver-card-header" style="background: linear-gradient(135deg, #00D2BE 0%, #0090D1 100%);">
+                        <div class="driver-number-large">44</div>
+                        <div class="driver-card-photo">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <div class="driver-card-content">
+                        <h3>Lewis HAMILTON</h3>
+                        <p class="driver-team"><i class="fas fa-flag-checkered"></i> Mercedes-AMG</p>
+                        <p class="driver-nationality"><i class="fas fa-flag"></i> Royaume-Uni</p>
+                        <div class="driver-stats-mini">
+                            <div class="stat-mini">
+                                <strong>103</strong>
+                                <span>Victoires</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>7</strong>
+                                <span>Titres</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>104</strong>
+                                <span>Poles</span>
+                            </div>
+                        </div>
+                        <p class="driver-bio">Légende vivante de la F1, Hamilton détient de nombreux records. Son expérience et sa vitesse en font toujours un concurrent redoutable.</p>
+                    </div>
+                </div>
+
+                <!-- Charles Leclerc -->
+                <div class="driver-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="driver-card-header" style="background: linear-gradient(135deg, #DC0000 0%, #8B0000 100%);">
+                        <div class="driver-number-large">16</div>
+                        <div class="driver-card-photo">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <div class="driver-card-content">
+                        <h3>Charles LECLERC</h3>
+                        <p class="driver-team"><i class="fas fa-flag-checkered"></i> Ferrari</p>
+                        <p class="driver-nationality"><i class="fas fa-flag"></i> Monaco</p>
+                        <div class="driver-stats-mini">
+                            <div class="stat-mini">
+                                <strong>5</strong>
+                                <span>Victoires</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>0</strong>
+                                <span>Titres</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>24</strong>
+                                <span>Poles</span>
+                            </div>
+                        </div>
+                        <p class="driver-bio">Pilote rapide et talentueux, Leclerc est l'espoir de Ferrari pour ramener un titre mondial à Maranello. Sa vitesse en qualifications est impressionnante.</p>
+                    </div>
+                </div>
+
+                <!-- Fernando Alonso -->
+                <div class="driver-card" data-aos="fade-up">
+                    <div class="driver-card-header" style="background: linear-gradient(135deg, #006F62 0%, #003D34 100%);">
+                        <div class="driver-number-large">14</div>
+                        <div class="driver-card-photo">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <div class="driver-card-content">
+                        <h3>Fernando ALONSO</h3>
+                        <p class="driver-team"><i class="fas fa-flag-checkered"></i> Aston Martin</p>
+                        <p class="driver-nationality"><i class="fas fa-flag"></i> Espagne</p>
+                        <div class="driver-stats-mini">
+                            <div class="stat-mini">
+                                <strong>32</strong>
+                                <span>Victoires</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>2</strong>
+                                <span>Titres</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>22</strong>
+                                <span>Poles</span>
+                            </div>
+                        </div>
+                        <p class="driver-bio">À 42 ans, Alonso reste l'un des pilotes les plus compétitifs. Son expérience et sa passion pour la course sont inégalées.</p>
+                    </div>
+                </div>
+
+                <!-- Lando Norris -->
+                <div class="driver-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="driver-card-header" style="background: linear-gradient(135deg, #FF8700 0%, #FF4500 100%);">
+                        <div class="driver-number-large">4</div>
+                        <div class="driver-card-photo">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <div class="driver-card-content">
+                        <h3>Lando NORRIS</h3>
+                        <p class="driver-team"><i class="fas fa-flag-checkered"></i> McLaren</p>
+                        <p class="driver-nationality"><i class="fas fa-flag"></i> Royaume-Uni</p>
+                        <div class="driver-stats-mini">
+                            <div class="stat-mini">
+                                <strong>1</strong>
+                                <span>Victoires</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>0</strong>
+                                <span>Titres</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>1</strong>
+                                <span>Poles</span>
+                            </div>
+                        </div>
+                        <p class="driver-bio">Jeune pilote britannique plein de talent, Norris s'impose progressivement comme l'un des futurs champions potentiels de la F1.</p>
+                    </div>
+                </div>
+
+                <!-- Carlos Sainz -->
+                <div class="driver-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="driver-card-header" style="background: linear-gradient(135deg, #DC0000 0%, #8B0000 100%);">
+                        <div class="driver-number-large">55</div>
+                        <div class="driver-card-photo">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <div class="driver-card-content">
+                        <h3>Carlos SAINZ</h3>
+                        <p class="driver-team"><i class="fas fa-flag-checkered"></i> Ferrari</p>
+                        <p class="driver-nationality"><i class="fas fa-flag"></i> Espagne</p>
+                        <div class="driver-stats-mini">
+                            <div class="stat-mini">
+                                <strong>3</strong>
+                                <span>Victoires</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>0</strong>
+                                <span>Titres</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>5</strong>
+                                <span>Poles</span>
+                            </div>
+                        </div>
+                        <p class="driver-bio">Pilote solide et constant, Sainz a prouvé qu'il pouvait gagner des courses et être un partenaire de valeur chez Ferrari.</p>
+                    </div>
+                </div>
+
+                <!-- George Russell -->
+                <div class="driver-card" data-aos="fade-up">
+                    <div class="driver-card-header" style="background: linear-gradient(135deg, #00D2BE 0%, #0090D1 100%);">
+                        <div class="driver-number-large">63</div>
+                        <div class="driver-card-photo">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <div class="driver-card-content">
+                        <h3>George RUSSELL</h3>
+                        <p class="driver-team"><i class="fas fa-flag-checkered"></i> Mercedes-AMG</p>
+                        <p class="driver-nationality"><i class="fas fa-flag"></i> Royaume-Uni</p>
+                        <div class="driver-stats-mini">
+                            <div class="stat-mini">
+                                <strong>2</strong>
+                                <span>Victoires</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>0</strong>
+                                <span>Titres</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>2</strong>
+                                <span>Poles</span>
+                            </div>
+                        </div>
+                        <p class="driver-bio">Rapide et méthodique, Russell représente le futur de Mercedes. Sa capacité à performer sous pression est remarquable.</p>
+                    </div>
+                </div>
+
+                <!-- Sergio Pérez -->
+                <div class="driver-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="driver-card-header" style="background: linear-gradient(135deg, #1E41FF 0%, #001C58 100%);">
+                        <div class="driver-number-large">11</div>
+                        <div class="driver-card-photo">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <div class="driver-card-content">
+                        <h3>Sergio PÉREZ</h3>
+                        <p class="driver-team"><i class="fas fa-flag-checkered"></i> Red Bull Racing</p>
+                        <p class="driver-nationality"><i class="fas fa-flag"></i> Mexique</p>
+                        <div class="driver-stats-mini">
+                            <div class="stat-mini">
+                                <strong>6</strong>
+                                <span>Victoires</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>0</strong>
+                                <span>Titres</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>3</strong>
+                                <span>Poles</span>
+                            </div>
+                        </div>
+                        <p class="driver-bio">Pilote expérimenté et stratège, Pérez joue un rôle crucial dans les succès de Red Bull Racing avec sa gestion de course exceptionnelle.</p>
+                    </div>
+                </div>
+
+                <!-- Oscar Piastri -->
+                <div class="driver-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="driver-card-header" style="background: linear-gradient(135deg, #FF8700 0%, #FF4500 100%);">
+                        <div class="driver-number-large">81</div>
+                        <div class="driver-card-photo">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <div class="driver-card-content">
+                        <h3>Oscar PIASTRI</h3>
+                        <p class="driver-team"><i class="fas fa-flag-checkered"></i> McLaren</p>
+                        <p class="driver-nationality"><i class="fas fa-flag"></i> Australie</p>
+                        <div class="driver-stats-mini">
+                            <div class="stat-mini">
+                                <strong>1</strong>
+                                <span>Victoires</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>0</strong>
+                                <span>Titres</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>0</strong>
+                                <span>Poles</span>
+                            </div>
+                        </div>
+                        <p class="driver-bio">Rookie prometteur, Piastri a impressionné dès sa première saison. Son talent naturel laisse présager un bel avenir en F1.</p>
+                    </div>
+                </div>
+
+                <!-- Pierre Gasly -->
+                <div class="driver-card" data-aos="fade-up">
+                    <div class="driver-card-header" style="background: linear-gradient(135deg, #0090FF 0%, #FF1E8E 100%);">
+                        <div class="driver-number-large">10</div>
+                        <div class="driver-card-photo">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <div class="driver-card-content">
+                        <h3>Pierre GASLY</h3>
+                        <p class="driver-team"><i class="fas fa-flag-checkered"></i> Alpine</p>
+                        <p class="driver-nationality"><i class="fas fa-flag"></i> France</p>
+                        <div class="driver-stats-mini">
+                            <div class="stat-mini">
+                                <strong>1</strong>
+                                <span>Victoires</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>0</strong>
+                                <span>Titres</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>3</strong>
+                                <span>Poles</span>
+                            </div>
+                        </div>
+                        <p class="driver-bio">Pilote français rapide et déterminé, Gasly a montré sa classe avec une victoire mémorable à Monza en 2020.</p>
+                    </div>
+                </div>
+
+                <!-- Esteban Ocon -->
+                <div class="driver-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="driver-card-header" style="background: linear-gradient(135deg, #0090FF 0%, #FF1E8E 100%);">
+                        <div class="driver-number-large">31</div>
+                        <div class="driver-card-photo">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <div class="driver-card-content">
+                        <h3>Esteban OCON</h3>
+                        <p class="driver-team"><i class="fas fa-flag-checkered"></i> Alpine</p>
+                        <p class="driver-nationality"><i class="fas fa-flag"></i> France</p>
+                        <div class="driver-stats-mini">
+                            <div class="stat-mini">
+                                <strong>1</strong>
+                                <span>Victoires</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>0</strong>
+                                <span>Titres</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>0</strong>
+                                <span>Poles</span>
+                            </div>
+                        </div>
+                        <p class="driver-bio">Pilote français tenace, Ocon a remporté son premier Grand Prix en Hongrie 2021. Sa détermination est son plus grand atout.</p>
+                    </div>
+                </div>
+
+                <!-- Lance Stroll -->
+                <div class="driver-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="driver-card-header" style="background: linear-gradient(135deg, #006F62 0%, #003D34 100%);">
+                        <div class="driver-number-large">18</div>
+                        <div class="driver-card-photo">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <div class="driver-card-content">
+                        <h3>Lance STROLL</h3>
+                        <p class="driver-team"><i class="fas fa-flag-checkered"></i> Aston Martin</p>
+                        <p class="driver-nationality"><i class="fas fa-flag"></i> Canada</p>
+                        <div class="driver-stats-mini">
+                            <div class="stat-mini">
+                                <strong>0</strong>
+                                <span>Victoires</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>0</strong>
+                                <span>Titres</span>
+                            </div>
+                            <div class="stat-mini">
+                                <strong>1</strong>
+                                <span>Poles</span>
+                            </div>
+                        </div>
+                        <p class="driver-bio">Pilote canadien régulier, Stroll a montré des moments de brillance, notamment sous la pluie et en qualifications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legends Section -->
+    <section class="section legends-section" style="background:black;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Légendes de la F1</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Les pilotes qui ont marqué l'histoire</p>
+            </div>
+
+            <div class="legends-grid">
+                <div class="legend-card" data-aos="fade-up">
+                    <div class="legend-icon">👑</div>
+                    <h3>Michael Schumacher</h3>
+                    <p class="legend-years">1991 - 2012</p>
+                    <div class="legend-stats">
+                        <span>7 Titres Mondiaux</span>
+                        <span>91 Victoires</span>
+                    </div>
+                    <p class="legend-bio">Légende allemande qui a dominé la F1 dans les années 2000 avec Ferrari.</p>
+                </div>
+
+                <div class="legend-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="legend-icon">⚡</div>
+                    <h3>Ayrton Senna</h3>
+                    <p class="legend-years">1984 - 1994</p>
+                    <div class="legend-stats">
+                        <span>3 Titres Mondiaux</span>
+                        <span>41 Victoires</span>
+                    </div>
+                    <p class="legend-bio">Pilote brésilien iconique, considéré comme l'un des plus grands de tous les temps.</p>
+                </div>
+
+                <div class="legend-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="legend-icon">🏆</div>
+                    <h3>Alain Prost</h3>
+                    <p class="legend-years">1980 - 1993</p>
+                    <div class="legend-stats">
+                        <span>4 Titres Mondiaux</span>
+                        <span>51 Victoires</span>
+                    </div>
+                    <p class="legend-bio">"Le Professeur" français, maître de la stratégie et de la régularité.</p>
+                </div>
+
+                <div class="legend-card" data-aos="fade-up">
+                    <div class="legend-icon">🔥</div>
+                    <h3>Juan Manuel Fangio</h3>
+                    <p class="legend-years">1950 - 1958</p>
+                    <div class="legend-stats">
+                        <span>5 Titres Mondiaux</span>
+                        <span>24 Victoires</span>
+                    </div>
+                    <p class="legend-bio">Premier grand champion argentin, il a dominé les premières années de la F1.</p>
+                </div>
+
+                <div class="legend-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="legend-icon">🎯</div>
+                    <h3>Niki Lauda</h3>
+                    <p class="legend-years">1971 - 1985</p>
+                    <div class="legend-stats">
+                        <span>3 Titres Mondiaux</span>
+                        <span>25 Victoires</span>
+                    </div>
+                    <p class="legend-bio">Pilote autrichien courageux, célèbre pour son retour héroïque après son accident.</p>
+                </div>
+
+                <div class="legend-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="legend-icon">🌟</div>
+                    <h3>Jim Clark</h3>
+                    <p class="legend-years">1960 - 1968</p>
+                    <div class="legend-stats">
+                        <span>2 Titres Mondiaux</span>
+                        <span>25 Victoires</span>
+                    </div>
+                    <p class="legend-bio">Pilote écossais brillant, considéré comme l'un des plus talentueux de l'histoire.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-flag-checkered"></i> FORMULE<strong>1</strong></h3>
+                    <p>Site vitrine dédié à l'univers de la Formule 1, le sport automobile le plus prestigieux au monde.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="index.html#histoire">Histoire</a></li>
+                        <li><a href="equipes.html">Équipes</a></li>
+                        <li><a href="pilotes.html">Pilotes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Plus d'Infos</h4>
+                    <ul class="footer-links">
+                        <li><a href="circuits.html">Circuits</a></li>
+                        <li><a href="index.html#actualites">Actualités</a></li>
+                        <li><a href="index.html#stats">Statistiques</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> contact@f1vitrine.com</p>
+                    <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Formule 1 WORLD - Mohamed BENAOUDA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formule 1 - Le Summum du Sport Automobile</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Racing+Sans+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-flag-checkered"></i>
+                    <span>FORMULE<strong>1</strong></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Accueil</a></li>
+                    <li><a href="#histoire" class="nav-link">Histoire</a></li>
+                    <li><a href="equipes.html" class="nav-link">Équipes</a></li>
+                    <li><a href="pilotes.html" class="nav-link">Pilotes</a></li>
+                    <li><a href="circuits.html" class="nav-link">Circuits</a></li>
+                    <li><a href="#actualites" class="nav-link">Actualités</a></li>
+                    <li><a href="#stats" class="nav-link">Statistiques</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">FORMULE 1</h1>
+            <p class="hero-subtitle">La Vitesse à l'État Pur</p>
+            <p class="hero-description">Découvrez l'univers du sport automobile le plus prestigieux au monde</p>
+            <a href="#histoire" class="btn btn-primary">Découvrir</a>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Histoire Section -->
+    <section id="histoire" class="section histoire">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">L'Histoire de la F1</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-year">1950</div>
+                    <div class="timeline-content">
+                        <h3>Naissance de la F1</h3>
+                        <p>Le premier championnat du monde de Formule 1 est organisé. Le premier Grand Prix a lieu à Silverstone, Royaume-Uni.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-year">1960-1970</div>
+                    <div class="timeline-content">
+                        <h3>L'Ère de l'Innovation</h3>
+                        <p>Introduction des moteurs arrière, des ailerons et des premiers systèmes de sécurité. Les voitures deviennent de plus en plus sophistiquées.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-year">1980-1990</div>
+                    <div class="timeline-content">
+                        <h3>L'Ère Turbo</h3>
+                        <p>Les moteurs turbocompressés dominent la décennie. Émergence de légendes comme Senna et Prost.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-year">2000-2013</div>
+                    <div class="timeline-content">
+                        <h3>Domination Ferrari et Red Bull</h3>
+                        <p>Michael Schumacher remporte 7 titres mondiaux. Red Bull domine avec Sebastian Vettel (4 titres).</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-year">2014-Présent</div>
+                    <div class="timeline-content">
+                        <h3>Ère Hybride</h3>
+                        <p>Introduction des moteurs hybrides V6. Mercedes domine avec Lewis Hamilton. Max Verstappen établit de nouveaux records.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Équipes Section -->
+    <section id="equipes" class="section equipes-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Les Équipes</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Les écuries qui font vibrer le championnat</p>
+            </div>
+            <div class="teams-grid">
+                <div class="team-card" data-aos="zoom-in">
+                    <div class="team-header" style="background: linear-gradient(135deg, #00D2BE 0%, #0090D1 100%);">
+                        <h3>Mercedes-AMG</h3>
+                    </div>
+                    <div class="team-info">
+                        <p><i class="fas fa-trophy"></i> 8 Titres Constructeurs</p>
+                        <p><i class="fas fa-flag"></i> Allemagne</p>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="zoom-in">
+                    <div class="team-header" style="background: linear-gradient(135deg, #1E41FF 0%, #001C58 100%);">
+                        <h3>Red Bull Racing</h3>
+                    </div>
+                    <div class="team-info">
+                        <p><i class="fas fa-trophy"></i> 6 Titres Constructeurs</p>
+                        <p><i class="fas fa-flag"></i> Autriche</p>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="zoom-in">
+                    <div class="team-header" style="background: linear-gradient(135deg, #DC0000 0%, #8B0000 100%);">
+                        <h3>Ferrari</h3>
+                    </div>
+                    <div class="team-info">
+                        <p><i class="fas fa-trophy"></i> 16 Titres Constructeurs</p>
+                        <p><i class="fas fa-flag"></i> Italie</p>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="zoom-in">
+                    <div class="team-header" style="background: linear-gradient(135deg, #FF8700 0%, #FF4500 100%);">
+                        <h3>McLaren</h3>
+                    </div>
+                    <div class="team-info">
+                        <p><i class="fas fa-trophy"></i> 8 Titres Constructeurs</p>
+                        <p><i class="fas fa-flag"></i> Royaume-Uni</p>
+                    </div>
+                </div>
+            </div>
+            <div class="center-btn">
+                <a href="equipes.html" class="btn btn-secondary">Voir Toutes les Équipes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Actualités Section -->
+    <section id="actualites" class="section actualites">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Dernières Actualités</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="news-grid">
+                <article class="news-card" data-aos="fade-up">
+                    <div class="news-image" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1595603952840-2acd2b6e1f9e?w=800') center/cover;"></div>
+                    <div class="news-content">
+                        <span class="news-date"><i class="far fa-calendar"></i> Décembre 2024</span>
+                        <h3>Saison 2024 : Un Championnat Palpitant</h3>
+                        <p>Retour sur une saison exceptionnelle avec des courses mémorables et des performances historiques.</p>
+                        <a href="#" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="news-image" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1541443131876-44b03de101c5?w=800') center/cover;"></div>
+                    <div class="news-content">
+                        <span class="news-date"><i class="far fa-calendar"></i> Janvier 2025</span>
+                        <h3>Nouveaux Règlements pour 2025</h3>
+                        <p>Les nouvelles réglementations techniques et sportives qui vont bouleverser la compétition.</p>
+                        <a href="#" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="news-image" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800') center/cover;"></div>
+                    <div class="news-content">
+                        <span class="news-date"><i class="far fa-calendar"></i> Janvier 2025</span>
+                        <h3>Technologies Durables en F1</h3>
+                        <p>La F1 s'engage vers un avenir plus écologique avec les carburants durables et l'électrification.</p>
+                        <a href="#" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistiques Section -->
+    <section id="stats" class="section stats" style="background: black;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Statistiques Clés</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="flip-up">
+                    <i class="fas fa-trophy stat-icon"></i>
+                    <div class="stat-number" data-count="74">0</div>
+                    <div class="stat-label">Saisons</div>
+                </div>
+                <div class="stat-card" data-aos="flip-up" data-aos-delay="100">
+                    <i class="fas fa-flag-checkered stat-icon"></i>
+                    <div class="stat-number" data-count="1100">0</div>
+                    <div class="stat-label">Grands Prix</div>
+                </div>
+                <div class="stat-card" data-aos="flip-up" data-aos-delay="200">
+                    <i class="fas fa-users stat-icon"></i>
+                    <div class="stat-number" data-count="775">0</div>
+                    <div class="stat-label">Pilotes</div>
+                </div>
+                <div class="stat-card" data-aos="flip-up" data-aos-delay="300">
+                    <i class="fas fa-map-marked-alt stat-icon"></i>
+                    <div class="stat-number" data-count="77">0</div>
+                    <div class="stat-label">Circuits</div>
+                </div>
+            </div>
+            
+            <!-- Records Section -->
+            <div class="records-section">
+                <h3 class="records-title">Records Légendaires</h3>
+                <div class="records-grid">
+                    <div class="record-card" data-aos="fade-right">
+                        <div class="record-icon">🏆</div>
+                        <div class="record-content">
+                            <h4>Plus de Titres Pilote</h4>
+                            <p class="record-holder">Lewis Hamilton & Michael Schumacher</p>
+                            <p class="record-value">7 Championnats</p>
+                        </div>
+                    </div>
+                    <div class="record-card" data-aos="fade-left">
+                        <div class="record-icon">🏁</div>
+                        <div class="record-content">
+                            <h4>Plus de Victoires</h4>
+                            <p class="record-holder">Lewis Hamilton</p>
+                            <p class="record-value">103 Victoires</p>
+                        </div>
+                    </div>
+                    <div class="record-card" data-aos="fade-right">
+                        <div class="record-icon">⚡</div>
+                        <div class="record-content">
+                            <h4>Plus de Pole Positions</h4>
+                            <p class="record-holder">Lewis Hamilton</p>
+                            <p class="record-value">104 Poles</p>
+                        </div>
+                    </div>
+                    <div class="record-card" data-aos="fade-left">
+                        <div class="record-icon">🎯</div>
+                        <div class="record-content">
+                            <h4>Plus de Podiums</h4>
+                            <p class="record-holder">Lewis Hamilton</p>
+                            <p class="record-value">197 Podiums</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-flag-checkered"></i> FORMULE<strong>1</strong></h3>
+                    <p>Site vitrine dédié à l'univers de la Formule 1, le sport automobile le plus prestigieux au monde.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#histoire">Histoire</a></li>
+                        <li><a href="equipes.html">Équipes</a></li>
+                        <li><a href="pilotes.html">Pilotes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Plus d'Infos</h4>
+                    <ul class="footer-links">
+                        <li><a href="circuits.html">Circuits</a></li>
+                        <li><a href="#actualites">Actualités</a></li>
+                        <li><a href="#stats">Statistiques</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> contact@f1vitrine.com</p>
+                    <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Formule 1 WORLD - Mohamed BENAOUDA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
